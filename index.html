@@ -1,317 +1,300 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#171713">
-	<meta name="description" content="Ká-zê-á: drinks, pista e rolê completo no Ipiranga. Sextas e sábados, das 20h às 4h.">
-	<title>KZA-2675 | Drinks, pista e rolê completo</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<style>
-		:root {
-			color-scheme: dark;
-			--ink: #171713;
-			--paper: #f1eee5;
-			--muted: #aaa69b;
-			--acid: #d6fa58;
-			--line: rgba(241, 238, 229, .2);
-			--serif: Georgia, 'Times New Roman', serif;
-		}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KZA-2675 | Drinks, pista e rolê no Ipiranga</title>
+<meta name="description" content="KZA-2675: drinks, pista e gente boa no Ipiranga. Sexta e sábado, das 20h às 4h. Rua Costa Aguiar, 2675.">
+<meta name="theme-color" content="#0d0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@1&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d0c; --bg2:#151513; --line:#2a2a26;
+  --ink:#f3efe4; --mute:#a7a396;
+  --lime:#d4f55a; --lime-ink:#141a00; --pink:#ff4fa3;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 "DM Sans",system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.display{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.035em;line-height:.92}
+.serif{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.eyebrow{font:700 12px/1 "DM Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}
 
-		* { box-sizing: border-box; }
-		html { scroll-behavior: smooth; }
-		body {
-			margin: 0;
-			background-color: var(--ink);
-			background-image: radial-gradient(rgba(241, 238, 229, .055) .6px, transparent .8px), radial-gradient(rgba(0, 0, 0, .2) .7px, transparent .9px);
-			background-position: 0 0, 2px 3px;
-			background-size: 5px 5px, 7px 7px;
-			color: var(--paper);
-			font-family: 'DM Sans', sans-serif;
-			-webkit-font-smoothing: antialiased;
-		}
-		a { color: inherit; }
-		.site-header {
-			position: absolute;
-			z-index: 2;
-			top: 0;
-			left: 0;
-			display: flex;
-			width: 100%;
-			align-items: center;
-			justify-content: space-between;
-			padding: 26px clamp(22px, 6vw, 84px);
-		}
-		.wordmark { display: inline-flex; align-items: center; text-decoration: none; }
-		.wordmark img { display: block; width: auto; height: 82px; max-width: 260px; object-fit: contain; mix-blend-mode: screen; }
-		.header-link {
-			display: inline-flex;
-			align-items: center;
-			gap: 10px;
-			font-size: 17px;
-			font-weight: 600;
-			text-decoration: none;
-		}
-		.header-link::after { content: '↗'; color: var(--acid); font-size: 22px; }
-		.hero {
-			position: relative;
-			display: flex;
-			min-height: min(780px, 100svh);
-			align-items: flex-end;
-			overflow: hidden;
-			padding: 150px clamp(22px, 10vw, 144px) 76px;
-			isolation: isolate;
-		}
-		.hero::before {
-			position: absolute;
-			z-index: -2;
-			inset: 0;
-			background: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=85') center 52% / cover;
-			content: '';
-			filter: saturate(.72);
-			transform: scale(1.015);
-		}
-		.hero::after {
-			position: absolute;
-			z-index: -1;
-			inset: 0;
-			background: linear-gradient(90deg, rgba(15, 15, 13, .84) 0%, rgba(15, 15, 13, .52) 48%, rgba(15, 15, 13, .08) 100%), linear-gradient(0deg, rgba(15, 15, 13, .68), transparent 48%);
-			content: '';
-		}
-		.hero-content { max-width: 760px; animation: arrive .75s ease-out both; }
-		.eyebrow {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			margin: 0 0 22px;
-			color: var(--acid);
-			font-size: 12px;
-			font-weight: 700;
-			letter-spacing: .14em;
-			text-transform: uppercase;
-		}
-		.eyebrow::before { width: 24px; height: 1px; background: currentColor; content: ''; }
-		h1 {
-			margin: 0;
-			font-family: 'Space Grotesk', sans-serif;
-			font-size: clamp(64px, 11vw, 144px);
-			font-weight: 600;
-			letter-spacing: 0;
-			line-height: .88;
-		}
-		.hero-copy {
-			max-width: 440px;
-			margin: 25px 0 0;
-			color: rgba(241, 238, 229, .86);
-			font-size: clamp(17px, 2vw, 21px);
-			line-height: 1.45;
-		}
-		.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
-		.button {
-			display: inline-flex;
-			min-height: 52px;
-			align-items: center;
-			justify-content: center;
-			gap: 14px;
-			padding: 0 21px;
-			border: 1px solid transparent;
-			border-radius: 2px;
-			background: var(--acid);
-			color: var(--ink);
-			font-size: 14px;
-			font-weight: 700;
-			text-decoration: none;
-			transition: background .2s ease, transform .2s ease;
-		}
-		.button:hover { transform: translateY(-2px); background: #e3ff86; }
-		.button.secondary { border-color: rgba(241, 238, 229, .55); background: rgba(23, 23, 19, .25); color: var(--paper); }
-		.button.secondary:hover { background: rgba(23, 23, 19, .65); }
-		.button span { font-size: 18px; }
-		.social-icon { display: inline-block; width: 20px; height: 20px; flex: 0 0 auto; }
-		.social-icon.instagram { width: 18px; height: 18px; }
-		.button .social-icon { width: 19px; height: 19px; }
-		.info-strip {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1.25fr;
-			background-color: var(--acid);
-			background-image: radial-gradient(rgba(23, 23, 19, .06) .6px, transparent .8px);
-			background-size: 5px 5px;
-			padding: 0 clamp(22px, 10vw, 144px);
-			color: var(--ink);
-		}
-		.info-item { min-height: 130px; padding: 27px 24px 26px 0; }
-		.info-item + .info-item { border-left: 1px solid rgba(23, 23, 19, .22); padding-left: 28px; }
-		.info-label { margin: 0 0 11px; color: rgba(23, 23, 19, .68); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-		.info-value { margin: 0; font-size: 16px; line-height: 1.5; }
-		.info-value a { color: inherit; text-decoration-color: rgba(23, 23, 19, .55); text-underline-offset: 4px; }
-		.about {
-			display: grid;
-			grid-template-columns: .8fr 1.2fr;
-			gap: 40px;
-			align-items: start;
-			padding: 90px clamp(22px, 10vw, 144px) 100px;
-		}
-		.about-tag { margin: 6px 0 0; color: var(--acid); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-		.about h2 {
-			max-width: 660px;
-			margin: 0;
-			font-family: 'Space Grotesk', sans-serif;
-			font-size: clamp(35px, 5vw, 62px);
-			font-weight: 500;
-			letter-spacing: 0;
-			line-height: 1.04;
-		}
-		.about h2 em { color: var(--acid); font-family: var(--serif); font-weight: 400; }
-		.about-bottom {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-between;
-			gap: 24px;
-			grid-column: 2;
-			margin-top: 4px;
-		}
-		.about-bottom p { max-width: 440px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
-		.text-link { color: var(--acid); font-size: 14px; font-weight: 700; text-underline-offset: 5px; }
-		.reel-section {
-			display: grid;
-			grid-template-columns: minmax(0, 1fr);
-			gap: 28px;
-			border-top: 1px solid var(--line);
-			padding: 72px clamp(22px, 10vw, 144px);
-		}
-		.reel-gallery { display: grid; grid-template-columns: 1fr; width: min(100%, 380px); justify-self: center; }
-		.reel-frame { display: block; width: 100%; aspect-ratio: 9 / 16; border: 0; background: #25251f; }
-		.reel-heading { width: min(100%, 380px); justify-self: center; margin: 0; color: var(--acid); font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); font-weight: 600; line-height: 1.15; text-align: center; }
-		.site-footer {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-between;
-			gap: 20px;
-			border-top: 1px solid var(--line);
-			padding: 25px clamp(22px, 6vw, 84px);
-			color: var(--muted);
-			font-size: 12px;
-		}
-		.social-links { display: flex; flex-wrap: wrap; gap: 23px; }
-		.social-links a { display: inline-flex; align-items: center; gap: 8px; color: var(--paper); text-decoration: none; }
-		.social-links a:hover { color: var(--acid); }
-		.text-link { display: inline-flex; align-items: center; gap: 8px; }
-		.phrase { display: block; }
-		.reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s cubic-bezier(.2, .7, .2, 1); }
-		.reveal.is-visible { opacity: 1; transform: translateY(0); }
-		.hero-content > .eyebrow { transition-delay: .05s; }
-		.hero-content > .hero-copy { transition-delay: .25s; }
-		.hero-content > .hero-actions { transition-delay: .4s; }
-		#hero-title .phrase + .phrase { transition-delay: .15s; }
-		@keyframes arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-		@media (max-width: 680px) {
-			.site-header { padding-top: 20px; }
-			.hero { min-height: 760px; min-height: 92svh; padding: 130px 24px 55px; }
-			.hero::before { background-position: 58% center; }
-			.hero::after { background: linear-gradient(0deg, rgba(15, 15, 13, .88), rgba(15, 15, 13, .16) 100%); }
-			.header-link { font-size: 14px; }
-			.info-strip { grid-template-columns: 1fr; padding: 0 24px; }
-			.info-item { min-height: auto; padding: 20px 0; }
-			.info-item + .info-item { border-top: 1px solid rgba(23, 23, 19, .22); border-left: 0; padding-left: 0; }
-			.about { grid-template-columns: 1fr; gap: 26px; padding: 65px 24px 70px; }
-			.about-bottom { grid-column: 1; }
-			.reel-section { grid-template-columns: 1fr; gap: 30px; padding: 60px 24px; }
-			.reel-frame { width: min(100%, 340px); justify-self: center; }
-			.site-footer { padding: 22px 24px; }
-		}
-		@media (prefers-reduced-motion: reduce) {
-			*, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-		}
-	</style>
+/* grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;font:700 15px/1 "DM Sans";transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-lime{background:var(--lime);color:var(--lime-ink);box-shadow:0 0 0 0 rgba(212,245,90,.5)}
+.btn-lime:hover{transform:translateY(-2px);box-shadow:0 10px 40px -8px rgba(212,245,90,.6)}
+.btn-ghost{border:1.5px solid rgba(243,239,228,.35);color:var(--ink);backdrop-filter:blur(6px);background:rgba(13,13,12,.35)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(13,13,12,.85);backdrop-filter:blur(12px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{height:34px;width:auto;border-radius:6px}
+.nav-links{display:flex;gap:28px;font-weight:500;font-size:15px}
+.nav-links a{opacity:.8;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav .btn{padding:11px 16px;font-size:14px}
+@media (max-width:760px){.nav-links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 64px;isolation:isolate;overflow:hidden}
+.hero-bg{position:absolute;inset:-4%;z-index:-2;background:url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=70") center/cover;animation:zoom 22s ease-in-out infinite alternate;filter:saturate(.8) contrast(1.05)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(60% 50% at 80% 20%,rgba(255,79,163,.22),transparent 70%),
+  radial-gradient(50% 50% at 10% 90%,rgba(212,245,90,.16),transparent 70%),
+  linear-gradient(180deg,rgba(13,13,12,.55) 0%,rgba(13,13,12,.35) 40%,var(--bg) 100%)}
+@keyframes zoom{to{transform:scale(1.08) translateY(-1%)}}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 12px;border-radius:999px;background:rgba(13,13,12,.6);border:1px solid var(--line);font-size:14px;font-weight:500;backdrop-filter:blur(8px);margin-bottom:28px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mute)}
+.status.open .dot{background:var(--lime);box-shadow:0 0 0 0 rgba(212,245,90,.7);animation:pulse 1.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(212,245,90,0)}100%{box-shadow:0 0 0 0 rgba(212,245,90,0)}}
+.hero h1{font-size:clamp(64px,13vw,190px);margin:18px 0 22px}
+.hero h1 .serif{color:var(--lime);font-size:1.05em;letter-spacing:-.02em}
+.hero p.lead{font-size:clamp(18px,2.2vw,22px);color:#d9d5c9;max-width:520px;margin-bottom:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.scroll-hint{position:absolute;right:16px;bottom:64px;writing-mode:vertical-rl;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+@media (max-width:760px){.scroll-hint{display:none}.cta-row .btn{flex:1 1 100%;justify-content:center}}
+
+/* marquee */
+.marquee{background:var(--lime);color:var(--lime-ink);overflow:hidden;border-block:1px solid #000;transform:rotate(-1.2deg);margin:-6px -10px 0;position:relative;z-index:2}
+.track{display:flex;gap:40px;width:max-content;padding:16px 0;animation:slide 28s linear infinite;font:700 clamp(20px,3vw,30px)/1 "Space Grotesk";letter-spacing:-.02em;text-transform:uppercase}
+.track span{display:flex;align-items:center;gap:40px}
+.track span::after{content:"✦";font-size:.7em}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* info */
+section{padding:110px 0}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:14px;transition:border-color .25s,transform .25s}
+.card:hover{border-color:#4a4a43;transform:translateY(-3px)}
+.card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(212,245,90,.1);color:var(--lime)}
+.card .ico svg{width:22px;height:22px}
+.card h3{font:700 clamp(24px,2.6vw,30px)/1.1 "Space Grotesk";letter-spacing:-.02em}
+.card p{color:var(--mute)}
+.card .link{margin-top:auto;font-weight:700;color:var(--lime);display:inline-flex;gap:6px;align-items:center}
+.card .link:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:860px){.info{grid-template-columns:1fr}}
+
+/* events */
+.events{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.events h2{font-size:clamp(46px,7vw,96px);margin:18px 0 24px}
+.events h2 .serif{color:var(--pink)}
+.events p{color:#cfcbbf;font-size:18px;max-width:480px;margin-bottom:28px}
+.perks{list-style:none;display:grid;gap:12px;margin-bottom:34px}
+.perks li{display:flex;gap:12px;align-items:center;font-weight:500}
+.perks li::before{content:"";width:22px;height:22px;flex:none;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141a00' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/14px no-repeat}
+.reel{position:relative;justify-self:center;width:min(380px,100%)}
+.reel::before{content:"";position:absolute;inset:-18px;border-radius:32px;background:conic-gradient(from 180deg,var(--lime),var(--pink),var(--lime));filter:blur(40px);opacity:.35;z-index:-1}
+.reel iframe{width:100%;height:640px;border:0;border-radius:22px;background:#fff}
+@media (max-width:860px){.events{grid-template-columns:1fr}.reel iframe{height:600px}}
+
+/* map */
+.where{background:var(--bg2);border-block:1px solid var(--line)}
+.where-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:stretch}
+.where h2{font-size:clamp(40px,6vw,76px);margin:18px 0 20px}
+.where address{font-style:normal;font-size:20px;line-height:1.4;margin-bottom:28px;color:#d9d5c9}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.6) contrast(.9)}
+@media (max-width:860px){.where-grid{grid-template-columns:1fr}}
+
+/* closing */
+.closing{text-align:center;padding:140px 0}
+.closing h2{font-size:clamp(56px,11vw,160px)}
+.closing h2 .serif{color:var(--lime)}
+.closing p{color:var(--mute);font-size:19px;margin:26px auto 36px;max-width:460px}
+.closing .cta-row{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:22px}
+footer nav a:hover{color:var(--ink)}
+@media (min-width:761px){footer{padding-bottom:30px}}
+
+/* floating whatsapp (mobile) */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--lime);color:var(--lime-ink);display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(0,0,0,.6);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:28px;height:28px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-	<header class="site-header">
-		<a class="wordmark" href="#inicio" aria-label="Ká-zê-á, início"><img src="logo-kza.jpg" alt="Ká-zê-á"></a>
-		<a class="header-link" href="https://linktr.ee/kza2675" target="_blank" rel="noopener noreferrer">Todos os links</a>
-	</header>
 
-	<main>
-		<section class="hero" id="inicio" aria-labelledby="hero-title">
-			<div class="hero-content">
-				<p class="eyebrow reveal">A Ká-zê-á · Ipiranga</p>
-				<h1 id="hero-title"><span class="phrase reveal">Seu rolê.</span><span class="phrase reveal">Sua KZA.</span></h1>
-				<p class="hero-copy reveal">Drinks, pista e gente boa. A noite acontece aqui.</p>
-				<div class="hero-actions">
-					<a class="button" href="https://deliverydireto.com.br/bakos/bakos/pages/sobre-nos%E2%81%A0%EF%BF%BC" target="_blank" rel="noopener noreferrer">Tabacaria + delivery na Bakos <span aria-hidden="true">↗</span></a>
-					<a class="button secondary" href="https://api.whatsapp.com/send?phone=5511964251142&text=Oie%21%21" target="_blank" rel="noopener noreferrer">
-						<svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.52 0 .18 5.33.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.88 9.88 0 0 1-5.03-1.37l-.36-.21-3.74.98 1-3.65-.23-.38a9.86 9.86 0 0 1-1.52-5.27c0-5.46 4.44-9.9 9.9-9.9a9.83 9.83 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7c-.01 5.46-4.45 9.9-9.92 9.9Zm5.43-7.41c-.3-.15-1.77-.88-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.91-2.21-.24-.58-.48-.5-.67-.51l-.57-.01c-.2 0-.52.08-.79.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.48 1.69.61.71.23 1.36.2 1.87.12.57-.09 1.77-.73 2.02-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
-						Chamar a KZA no WhatsApp <span aria-hidden="true">↗</span>
-					</a>
-				</div>
-			</div>
-		</section>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#topo" aria-label="KZA - início"><img class="logo" src="https://soavprofissional.github.io/kza-2675/logo-kza.jpg" alt="KZA"></a>
+    <nav class="nav-links">
+      <a href="#role">O rolê</a>
+      <a href="#eventos">Aniversários</a>
+      <a href="#onde">Como chegar</a>
+      <a href="https://linktr.ee/kza2675" target="_blank" rel="noopener">Todos os links</a>
+    </nav>
+    <a class="btn btn-lime" href="https://www.instagram.com/kza2675/" target="_blank" rel="noopener">@kza2675</a>
+  </div>
+</header>
 
-		<section class="reel-section" aria-labelledby="events-title">
-			<h2 class="reel-heading reveal" id="events-title">Aniversários e eventos fechados</h2>
-			<div class="reel-gallery">
-				<iframe class="reel-frame" src="https://www.instagram.com/reel/DTV5YYmEgek/embed" title="Reel da Ká-zê-á no Instagram" loading="lazy" allowfullscreen></iframe>
-			</div>
-		</section>
+<main id="topo">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="status" id="status"><span class="dot"></span><span id="status-txt">Sexta e sábado · 20h às 4h</span></div>
+      <div class="eyebrow">A Ká-Zê-Á · Ipiranga · SP</div>
+      <h1 class="display">Seu rolê.<br>Sua <span class="serif">KZA.</span></h1>
+      <p class="lead">Drinks, pista e gente boa. A noite acontece aqui, toda sexta e sábado até as 4h.</p>
+      <div class="cta-row">
+        <a class="btn btn-lime" href="https://api.whatsapp.com/send?phone=5511964251142&text=Oie!!" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4.1.1.1.7-.1 1.3Z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://deliverydireto.com.br/bakos/bakos/pages/sobre-nos" target="_blank" rel="noopener">
+          Tabacaria + delivery na Bakos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">role pra baixo ↓</div>
+  </section>
 
-		<section class="info-strip" aria-label="Informações do lounge">
-			<div class="info-item">
-				<p class="info-label">Quando</p>
-				<p class="info-value">Sexta e sábado<br>20h às 4h</p>
-			</div>
-			<div class="info-item">
-				<p class="info-label">Onde</p>
-				<p class="info-value">Rua Costa Aguiar, 2675<br>Ipiranga · São Paulo</p>
-			</div>
-			<div class="info-item">
-				<p class="info-label">Também na KZA</p>
-				<p class="info-value">Pedidos de tabacaria e delivery pela Bakos</p>
-			</div>
-		</section>
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Drinks</span><span>Pista</span><span>Tabacaria</span><span>Aniversários</span><span>Gente boa</span><span>Ipiranga</span><span>Até as 4h</span>
+      <span>Drinks</span><span>Pista</span><span>Tabacaria</span><span>Aniversários</span><span>Gente boa</span><span>Ipiranga</span><span>Até as 4h</span>
+    </div>
+  </div>
 
-		<section class="about" id="espaco" aria-labelledby="about-title">
-			<p class="about-tag reveal">Mais que um endereço</p>
-			<h2 class="reveal" id="about-title">Chega junto.<br>A noite é <em>nossa.</em></h2>
-			<div class="about-bottom">
-				<p class="reveal">Um espaço pra brindar, dançar e curtir sem pressa. Cola com a gente no Ipiranga.</p>
-				<a class="text-link reveal" href="https://www.instagram.com/kza2675/" target="_blank" rel="noopener noreferrer">
-					<svg class="social-icon instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg>
-					Acompanhe a KZA no Instagram <span aria-hidden="true">↗</span>
-				</a>
-			</div>
-		</section>
-	</main>
+  <section id="role">
+    <div class="wrap">
+      <div class="info">
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div class="eyebrow">Quando</div>
+          <h3>Sexta e sábado<br>20h às 4h</h3>
+          <p>Chega cedo pro drink, fica até fechar a pista.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+          <div class="eyebrow">Onde</div>
+          <h3>Rua Costa Aguiar, 2675</h3>
+          <p>Ipiranga · São Paulo</p>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&query=Rua+Costa+Aguiar,+2675+-+Ipiranga,+São+Paulo" target="_blank" rel="noopener">Abrir no mapa ↗</a>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg></div>
+          <div class="eyebrow">Também na KZA</div>
+          <h3>Tabacaria e delivery</h3>
+          <p>Pedidos de tabacaria e delivery pela Bakos.</p>
+          <a class="link" href="https://deliverydireto.com.br/bakos/bakos/pages/sobre-nos" target="_blank" rel="noopener">Pedir na Bakos ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-	<footer class="site-footer">
-		<span>© KZA-2675 · Ipiranga, SP</span>
-		<nav class="social-links" aria-label="Links da KZA">
-			<a href="https://www.instagram.com/kza2675/" target="_blank" rel="noopener noreferrer">
-				<svg class="social-icon instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg>
-				Instagram <span aria-hidden="true">↗</span>
-			</a>
-			<a href="https://api.whatsapp.com/send?phone=5511964251142&text=Oie%21%21" target="_blank" rel="noopener noreferrer">
-				<svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.52 0 .18 5.33.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.88 9.88 0 0 1-5.03-1.37l-.36-.21-3.74.98 1-3.65-.23-.38a9.86 9.86 0 0 1-1.52-5.27c0-5.46 4.44-9.9 9.9-9.9a9.83 9.83 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7c-.01 5.46-4.45 9.9-9.92 9.9Zm5.43-7.41c-.3-.15-1.77-.88-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.91-2.21-.24-.58-.48-.5-.67-.51l-.57-.01c-.2 0-.52.08-.79.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.48 1.69.61.71.23 1.36.2 1.87.12.57-.09 1.77-.73 2.02-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
-				WhatsApp <span aria-hidden="true">↗</span>
-			</a>
-			<a href="https://linktr.ee/kza2675" target="_blank" rel="noopener noreferrer">Linktree ↗</a>
-		</nav>
-	</footer>
-	<script>
-		if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			const revealObserver = new IntersectionObserver((entries, observer) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('is-visible');
-						observer.unobserve(entry.target);
-					}
-				});
-			}, { threshold: 0.15 });
+  <section id="eventos" style="padding-top:20px">
+    <div class="wrap events">
+      <div class="rv">
+        <div class="eyebrow">Aniversários e eventos fechados</div>
+        <h2 class="display">Seu niver<br>é <span class="serif">aqui.</span></h2>
+        <p>Junta a galera e comemora na KZA. A gente monta o rolê com você: aniversário, confra ou evento fechado.</p>
+        <ul class="perks">
+          <li>Aniversários</li>
+          <li>Eventos fechados</li>
+          <li>Reserva direto pelo WhatsApp</li>
+        </ul>
+        <a class="btn btn-lime" href="https://api.whatsapp.com/send?phone=5511964251142&text=Oie!!%20Quero%20fazer%20meu%20anivers%C3%A1rio%20na%20KZA" target="_blank" rel="noopener">Quero reservar ↗</a>
+      </div>
+      <div class="reel rv">
+        <iframe src="https://www.instagram.com/reel/DTV5YYmEgek/embed" loading="lazy" title="Vídeo da KZA no Instagram" allowtransparency="true"></iframe>
+      </div>
+    </div>
+  </section>
 
-			document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
-		}
-	</script>
+  <section id="onde" class="where">
+    <div class="wrap where-grid">
+      <div class="rv">
+        <div class="eyebrow">Como chegar</div>
+        <h2 class="display">Cola no <span class="serif">Ipiranga.</span></h2>
+        <address>Rua Costa Aguiar, 2675<br>Ipiranga · São Paulo</address>
+        <div class="cta-row">
+          <a class="btn btn-lime" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Costa+Aguiar,+2675+-+Ipiranga,+São+Paulo" target="_blank" rel="noopener">Traçar rota ↗</a>
+          <a class="btn btn-ghost" href="https://www.waze.com/ul?q=Rua%20Costa%20Aguiar%202675%20Ipiranga%20S%C3%A3o%20Paulo&navigate=yes" target="_blank" rel="noopener">Abrir no Waze</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <iframe loading="lazy" title="Mapa da KZA" src="https://maps.google.com/maps?q=Rua%20Costa%20Aguiar%2C%202675%2C%20Ipiranga%2C%20S%C3%A3o%20Paulo&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap rv">
+      <div class="eyebrow">Mais que um endereço</div>
+      <h2 class="display" style="margin-top:20px">Chega junto.<br>A noite é <span class="serif">nossa.</span></h2>
+      <p>Um espaço pra brindar, dançar e curtir sem pressa.</p>
+      <div class="cta-row">
+        <a class="btn btn-lime" href="https://www.instagram.com/kza2675/" target="_blank" rel="noopener">Seguir no Instagram ↗</a>
+        <a class="btn btn-ghost" href="https://linktr.ee/kza2675" target="_blank" rel="noopener">Todos os links</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© KZA-2675 · Ipiranga, SP</span>
+    <nav>
+      <a href="https://www.instagram.com/kza2675/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://api.whatsapp.com/send?phone=5511964251142&text=Oie!!" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://linktr.ee/kza2675" target="_blank" rel="noopener">Linktree</a>
+    </nav>
+  </div>
+</footer>
+
+<a class="fab" href="https://api.whatsapp.com/send?phone=5511964251142&text=Oie!!" target="_blank" rel="noopener" aria-label="Chamar a KZA no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4.1.1.1.7-.1 1.3Z"/></svg>
+</a>
+
+<script>
+// nav fica sólida ao rolar
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// animação de entrada
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// status "aberto agora" no horário de São Paulo (sex e sáb, 20h–4h)
+(function(){
+  const el=document.getElementById('status'),txt=document.getElementById('status-txt');
+  function tick(){
+    const p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    const g=t=>p.find(x=>x.type===t).value;
+    const d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday'));
+    const h=parseInt(g('hour'),10)%24;
+    const open=((d===5||d===6)&&h>=20)||((d===6||d===0)&&h<4);
+    el.classList.toggle('open',open);
+    if(open){txt.textContent='Aberto agora · até as 4h'}
+    else if(d===5||(d===6&&h>=4)){txt.textContent='Hoje tem! Abre às 20h'}
+    else{txt.textContent='Fechado agora · abre sexta às 20h'}
+  }
+  tick();setInterval(tick,60000);
+})();
+</script>
 </body>
 </html>
