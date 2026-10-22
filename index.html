@@ -101,6 +101,19 @@ section{padding:110px 0}
 .reel iframe{width:100%;height:640px;border:0;border-radius:22px;background:#fff}
 @media (max-width:860px){.events{grid-template-columns:1fr}.reel iframe{height:600px}}
 
+/* complementary venue reels */
+.ambiente{padding-top:40px}
+.ambiente-intro{max-width:680px;margin:0 auto 38px;text-align:center}
+.ambiente-intro h2{font-size:clamp(40px,7vw,76px);margin:16px 0}
+.ambiente-intro p{max-width:560px;margin:0 auto;color:var(--mute);font-size:18px}
+.ambiente-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:900px;margin-inline:auto}
+.ambiente-card{min-width:0;padding:16px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
+.ambiente-card h3{margin:0 0 14px;font:700 20px/1.2 "Space Grotesk"}
+.ambiente-card iframe{display:block;width:100%;height:600px;border:0;border-radius:12px;background:var(--bg)}
+.ambiente-card>a{display:inline-flex;margin-top:14px;color:var(--lime);font-weight:700}
+@media (max-width:860px){.ambiente-grid{grid-template-columns:minmax(0,1fr);max-width:480px}}
+@media (max-width:520px){.ambiente-card{padding:12px}.ambiente-card iframe{height:540px}}
+
 /* map */
 .where{background:var(--bg2);border-block:1px solid var(--line)}
 .where-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:stretch}
@@ -142,6 +155,7 @@ footer nav a:hover{color:var(--ink)}
     <nav class="nav-links">
       <a href="#role">O rolê</a>
       <a href="#eventos">Aniversários</a>
+      <a href="#ambiente">O espaço</a>
       <a href="#onde">Como chegar</a>
       <a href="https://linktr.ee/kza2675" target="_blank" rel="noopener">Todos os links</a>
     </nav>
@@ -220,6 +234,28 @@ footer nav a:hover{color:var(--ink)}
       </div>
       <div class="reel rv">
         <iframe src="https://www.instagram.com/reel/DTV5YYmEgek/embed" loading="lazy" title="Vídeo da KZA no Instagram" allowtransparency="true"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="ambiente" class="ambiente">
+    <div class="wrap">
+      <div class="ambiente-intro rv">
+        <div class="eyebrow">Além do vídeo principal</div>
+        <h2 class="display">KZA por <span class="serif">dentro.</span></h2>
+        <p>Mais um pouco do espaço e da energia da casa, em publicações do Instagram da KZA.</p>
+      </div>
+      <div class="ambiente-grid">
+        <article class="ambiente-card rv">
+          <h3>Seu evento na KZA</h3>
+          <iframe src="https://www.instagram.com/reel/DeiChT-SbSg/embed" loading="lazy" title="Reel da KZA sobre eventos no espaço" allowtransparency="true"></iframe>
+          <a href="https://www.instagram.com/reel/DeiChT-SbSg/" target="_blank" rel="noopener noreferrer">Ver publicação original ↗</a>
+        </article>
+        <article class="ambiente-card rv">
+          <h3>A energia da noite</h3>
+          <iframe src="https://www.instagram.com/reel/DeVObFMSE0T/embed" loading="lazy" title="Reel da KZA sobre a experiência da noite" allowtransparency="true"></iframe>
+          <a href="https://www.instagram.com/reel/DeVObFMSE0T/" target="_blank" rel="noopener noreferrer">Ver publicação original ↗</a>
+        </article>
       </div>
     </div>
   </section>
